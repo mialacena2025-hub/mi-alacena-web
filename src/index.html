@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Alacena</title>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-amber-50 text-gray-800 font-sans">
+ 
+  <!-- Encabezado -->
+<header class="bg-amber-600 text-white fixed top-0 left-0 w-full shadow-md z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold">Mi Alacena</h1>
+    
+    <!-- Botón menú móvil --> 
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">☰</button> 
+    
+    <!-- Navegación para tablet y escritorio --> 
+    <nav id="menu" class="hidden md:flex space-x-6"> 
+      <a href="#" class="hover:underline">Inicio</a> 
+      <a href="#productos" class="hover:underline">Productos</a> 
+      <a href="#contacto" class="hover:underline">Contacto</a> 
+    </nav>
+  </div>
+
+  <!-- Menú desplegable móvil -->
+  <div id="mobile-menu" class="hidden md:hidden bg-amber-500 flex flex-col text-center space-y-2 py-3">
+    <a href="#" class="hover:bg-amber-600 py-2">Inicio</a>
+    <a href="#" class="hover:bg-amber-600 py-2">Productos</a>
+    <a href="#" class="hover:bg-amber-600 py-2">Contacto</a>
+  </div>
+</header>
+
+<!-- Botón Back to Top -->
+<button id="back-to-top" class="fixed bottom-6 right-6 opacity-0 bg-amber-600 text-white px-4 py-2 rounded-full shadow-lg z-50">
+  ↑
+</button>
+ 
+<!-- Sección Hero -->
+<section class="relative bg-center bg-cover bg-no-repeat rounded-2xl overflow-hidden text-white shadow-lg fade-in opacity-0 transition-opacity duration-700 ease-out" style="background-image: url('https://images.unsplash.com/photo-1617196034796-3c0b8e91c703?auto=format&fit=crop&w=1200&q=80');">
+  <div class="bg-black/40 absolute inset-0"></div>
+  <div class="relative z-10 text-center py-24 px-6">
+    <h2 class="text-4xl font-bold mb-4">Bienvenido a <span class="text-amber-300">Mi Alacena</span></h2>
+    <p class="text-lg mb-6">Productos frescos, locales y con sabor a hogar 🥚🥖🥛</p>
+    <button class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold shadow">
+      Explorar productos
+    </button>
+  </div>
+</section>
+
+<!-- Bienvenida -->
+<section class="mt-12 text-center fade-in opacity-0 transition-opacity duration-700 ease-out">
+  <h2 class="text-3xl font-semibold mb-4">¡Bienvenido a tu tienda favorita!</h2>
+  <p class="text-lg mb-6 text-gray-700">
+    Encuentra tus productos favoritos al mejor precio. Compra local, apoya a pequeños productores 🍞🥚🥛
+  </p>
+  <button class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg shadow transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    Ver productos
+  </button>
+</section>
+
+<!-- Productos destacados -->
+ <section id="productos" class="mt-20">
+   <h2 class="text-3xl font-bold text-amber-600 mb-8 text-center fade-in bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 gradient-animate">Productos Destacados 🛒</h2> 
+   <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3"> 
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition duration-500 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl fade-in hover-glow"> 
+      <img src="https://images.unsplash.com/photo-1606813903519-8e4f64691e41?auto=format&fit=crop&w=600&q=80" alt="Pan artesanal" class="w-full h-48 object-cover"> 
+      <div class="p-4 flex-1 flex flex-col justify-between"> 
+        <div><h3 class="text-lg font-semibold mb-2">Pan Artesanal</h3><p class="text-gray-700 mb-4">$1.500</p></div>
+        <button class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 gradient-animate text-white py-2 rounded-lg font-semibold hover-glow transition">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition duration-500 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl fade-in hover-glow">
+      <img src="https://images.unsplash.com/photo-1617196034796-3c0b8e91c703?auto=format&fit=crop&w=600&q=80" alt="Huevos frescos" class="w-full h-48 object-cover">
+      <div class="p-4 flex-1 flex flex-col justify-between">
+        <div><h3 class="text-lg font-semibold mb-2">Huevos Frescos</h3><p class="text-gray-700 mb-4">$2.000</p></div> 
+        <button class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 gradient-animate text-white py-2 rounded-lg font-semibold hover-glow transition">Agregar al carrito</button>
+      </div>
+     </div>
+     <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition duration-500 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl fade-in hover-glow"> 
+      <img src="https://images.unsplash.com/photo-1589187156660-11aee07f91c4?auto=format&fit=crop&w=600&q=80" alt="Leche natural" class="w-full h-48 object-cover"> 
+      <div class="p-4 flex-1 flex flex-col justify-between"> 
+        <div><h3 class="text-lg font-semibold mb-2">Leche Natural</h3><p class="text-gray-700 mb-4">$1.800</p></div> 
+        <button class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 gradient-animate text-white py-2 rounded-lg font-semibold hover-glow transition">Agregar al carrito</button> 
+      </div>
+     </div>
+    </div>
+   </section>
+
+<!-- Testimonios --> 
+ <section class="mt-20 bg-amber-50 rounded-2xl shadow p-8"> 
+  <h2 class="text-3xl font-bold text-amber-600 mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600 fade-in">Lo que dicen nuestros clientes 💬</h2> 
+  <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3"> 
+    <div class="bg-white p-6 rounded-xl shadow-md fade-in"><p class="text-gray-700 mb-4">“Los productos son frescos y deliciosos. ¡Siempre vuelvo por más!”</p><div class="flex items-center"><img src="https://via.placeholder.com/50" alt="Cliente 1" class="rounded-full mr-3"><span class="font-semibold">Ana P.</span></div></div> 
+    <div class="bg-white p-6 rounded-xl shadow-md fade-in"><p class="text-gray-700 mb-4">“Excelente atención y entrega rápida. Muy recomendable.”</p><div class="flex items-center"><img src="https://via.placeholder.com/50" alt="Cliente 2" class="rounded-full mr-3"><span class="font-semibold">Carlos R.</span></div></div> 
+    <div class="bg-white p-6 rounded-xl shadow-md fade-in"><p class="text-gray-700 mb-4">“Mi familia disfruta cada producto. ¡Saben a hogar!”</p><div class="flex items-center"><img src="https://via.placeholder.com/50" alt="Cliente 3" class="rounded-full mr-3"><span class="font-semibold">Lucía M.</span></div></div> 
+  </div>
+ </section>
+
+    <!-- Nuestra Historia -->
+<section class="mt-20 bg-white rounded-2xl shadow p-8 fade-in opacity-0 transition-opacity duration-700 ease-out">
+  <h2 class="text-3xl font-bold text-amber-600 mb-6">Nuestra historia 🏡</h2>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=80" alt="Pan artesanal" class="w-full md:w-1/2 rounded-xl shadow-md">
+    <div class="md:w-1/2 text-gray-700 leading-relaxed">
+      <p class="mb-4"><strong>Mi Alacena</strong> nació con el sueño de acercar productos frescos y locales a las familias de nuestra comunidad. Desde pan amasado hasta huevos de campo, trabajamos con pequeños productores para ofrecer alimentos con sabor real y hechos con cariño.</p>
+      <p>Cada compra apoya a quienes cultivan, elaboran y entregan con esfuerzo lo mejor de nuestra tierra. ¡Gracias por ser parte de esta historia y elegir lo natural! 🌾</p>
+    </div>
+  </div>
+</section>
+
+<!-- Blog / Novedades -->
+<section class="mt-20 bg-amber-50 rounded-2xl shadow p-8 fade-in opacity-0 transition-opacity duration-700 ease-out">
+  <h2 class="text-3xl font-bold text-amber-600 mb-8 text-center">Novedades 📰</h2>
+  <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <img src="https://via.placeholder.com/400x200" alt="Nuevo Pan Artesanal" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Nuevo Pan Artesanal</h3>
+        <p class="text-gray-600 mb-2 text-sm">Publicado: 01/11/2025</p>
+        <p class="text-gray-700">Descubre nuestro nuevo pan artesanal hecho con ingredientes locales y frescos.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <img src="https://via.placeholder.com/400x200" alt="Huevos de Temporada" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Huevos de Temporada</h3>
+        <p class="text-gray-600 mb-2 text-sm">Publicado: 28/10/2025</p>
+        <p class="text-gray-700">Nuestros huevos frescos de campo ya están disponibles en la tienda. ¡Apoya la producción local!</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <img src="https://via.placeholder.com/400x200" alt="Promoción Semanal" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Promoción Semanal</h3>
+        <p class="text-gray-600 mb-2 text-sm">Publicado: 25/10/2025</p>
+        <p class="text-gray-700">Aprovecha nuestra promoción semanal: compra 2 panes y recibe 1 gratis. Solo hasta agotar stock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ --> <section class="mt-20 bg-amber-50 rounded-2xl shadow p-8 fade-in"> 
+  <h2 class="text-3xl font-bold text-amber-600 mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">Preguntas Frecuentes ❓</h2> 
+  <div class="max-w-3xl mx-auto text-left space-y-4"> 
+    <button class="faq-btn w-full text-left font-semibold bg-amber-200 p-3 rounded">¿Cómo hago un pedido?</button> 
+    <div class="faq-content hidden p-3 text-gray-700 bg-amber-100 rounded">Puedes realizar tu pedido a través de nuestra página web o contactándonos por WhatsApp.</div> 
+    <button class="faq-btn w-full text-left font-semibold bg-amber-200 p-3 rounded">¿Realizan despacho a domicilio?</button> 
+    <div class="faq-content hidden p-3 text-gray-700 bg-amber-100 rounded">Sí, realizamos entregas en Talagante y alrededores con horarios programados.</div> 
+    <button class="faq-btn w-full text-left font-semibold bg-amber-200 p-3 rounded">¿Puedo pagar con tarjeta?</button> 
+    <div class="faq-content hidden p-3 text-gray-700 bg-amber-100 rounded">Aceptamos pagos con efectivo, transferencia y tarjetas de crédito/débito.</div> 
+  </div> 
+</section>
+
+<!-- Newsletter --> 
+<section class="mt-20 bg-white rounded-2xl shadow p-8 fade-in"> 
+ <h2 class="text-3xl font-bold text-amber-600 mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">Suscríbete a nuestro Newsletter ✉️</h2> 
+ <form class="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4"> 
+  <input type="email" placeholder="Tu correo electrónico" class="p-3 rounded-lg border border-gray-300 flex-1 focus:outline-none focus:ring-2 focus:ring-amber-400"> 
+  <button type="submit" class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover-glow transition">Suscribirme</button> 
+</form> 
+</section>
+
+<!-- Contacto --> 
+ <section id="contacto" class="mt-20 bg-amber-50 rounded-2xl shadow p-8 fade-in"> 
+  <h2 class="text-3xl font-bold text-amber-600 mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">Contacto 📞</h2> 
+  <div class="max-w-3xl mx-auto text-gray-700 space-y-4"> 
+    <p>📍 Dirección: Calle Carampangue, Talagante, Chile</p> 
+    <p>📧 Correo: mialacena2025@gmail.com </p>
+    <p>📱 WhatsApp: <a href="https://wa.me/56912345678" class="text-amber-600 hover:underline">+56 9 1234 5678</a></p> 
+  </div> 
+</section>
+
+<footer class="bg-amber-600">
+  <div class="border-t border-amber-500 mt-6 pt-4 text-center text-amber-100 text-sm">
+    © 2025 Mi Alacena. Todos los derechos reservados.
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script>
+  // Menú móvil
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Botón Back to Top
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.remove('opacity-0');
+    } else {
+      backToTop.classList.add('opacity-0');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // FAQ desplegable
+  const faqBtns = document.querySelectorAll('.faq-btn');
+  faqBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('hidden');
+    });
+  });
+
+  // Animación fade-in al hacer scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('opacity-100');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>    
